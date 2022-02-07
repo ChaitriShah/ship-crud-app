@@ -184,7 +184,7 @@ function App() {
           <tr>
             <td>Code:</td>
             <td>
-              <input type="text" name="code" required="required" size="24" ref={codeInput} placeholder="Enter code e.g. XXXX-0000-X0" onChange={handleAddFormChange} />
+              <input type="text" name="code" required="required" size="24" ref={codeInput} placeholder="Enter code e.g. XXXX-0000-X0" value={addFormData.code} onChange={handleAddFormChange} />
             </td>
           </tr>
         </table>
