@@ -147,7 +147,7 @@ function App() {
           </thead>
           <tbody>
             {details.map((detail) => (
-              <Fragment>
+              <Fragment key={detail.id}>
                 {editDetailId === detail.id ? (
                   <EditableRow editFormData={editFormData}
                     handleEditFormChange={handleEditFormChange} handleCancelClick={handleCancelClick} />
@@ -163,30 +163,32 @@ function App() {
       </form>
 
       <h2>Add a new Ship</h2>
-      <form class="add-form" onSubmit={handleFormSubmit}>
+      <form className="add-form" onSubmit={handleFormSubmit}>
         <table>
-          <tr>
-            <td>Name:</td>
-            <td><input type="text" name="name" required="required" size="24" placeholder="Enter name" value={addFormData.name} onChange={handleAddFormChange} /></td>
-          </tr>
-          <tr>
-            <td>Length:</td>
-            <td>
-              <input type="number" name="length" required="required" size="24" placeholder="Enter length in metres" value={addFormData.length} onChange={handleAddFormChange} />
-            </td>
-          </tr>
-          <tr>
-            <td>Width:</td>
-            <td>
-              <input type="number" name="width" required="required" size="30" placeholder="Enter width in metres" value={addFormData.width} onChange={handleAddFormChange} />
-            </td>
-          </tr>
-          <tr>
-            <td>Code:</td>
-            <td>
-              <input type="text" name="code" required="required" size="24" ref={codeInput} placeholder="Enter code e.g. XXXX-0000-X0" value={addFormData.code} onChange={handleAddFormChange} />
-            </td>
-          </tr>
+          <thead>
+            <tr>
+              <td>Name:</td>
+              <td><input type="text" name="name" required="required" size="24" placeholder="Enter name" value={addFormData.name} onChange={handleAddFormChange} /></td>
+            </tr>
+            <tr>
+              <td>Length:</td>
+              <td>
+                <input type="number" name="length" required="required" size="24" placeholder="Enter length in metres" value={addFormData.length} onChange={handleAddFormChange} />
+              </td>
+            </tr>
+            <tr>
+              <td>Width:</td>
+              <td>
+                <input type="number" name="width" required="required" size="30" placeholder="Enter width in metres" value={addFormData.width} onChange={handleAddFormChange} />
+              </td>
+            </tr>
+            <tr>
+              <td>Code:</td>
+              <td>
+                <input type="text" name="code" required="required" size="24" ref={codeInput} placeholder="Enter code e.g. XXXX-0000-X0" value={addFormData.code} onChange={handleAddFormChange} />
+              </td>
+            </tr>
+          </thead>
         </table>
         {isValidated === false ? <span small="true" style={{ color: "red" }}>The Ship Code is invalid. Please enter in format XXXX-0000-X0. </span> : null}
         <br />

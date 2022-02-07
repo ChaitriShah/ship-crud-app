@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 
-const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) => {
+const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick, handleEditFormSubmit }) => {
 
     const [isEditCodeValidated, setEditCodeValidated] = useState(true);
     const [codeInputClass, setCodeInputClass] = useState("codeError");
@@ -45,7 +45,7 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick }) 
                 {isEditCodeValidated === false ? <span small="true" style={{ color: "red" }}>Enter Ship code in  XXXX-0000-X0 format. </span> : null}
             </td>
             <td>
-                <button type="submit" >Save</button>
+                {isEditCodeValidated ? <button onClick={handleEditFormSubmit}>Save</button> : <button type="button">Save</button>}
                 <button type="button" onClick={handleCancelClick}>Cancel</button>
             </td>
         </tr>
