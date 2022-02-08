@@ -16,5 +16,5 @@ To visit app:
 `http://localhost:3000/`
 
 ## Note:
-This app is created using React. \
+This app is created using React and Material UI. \
 Added `node-modules` and `package-lock.json` in .gitignore
