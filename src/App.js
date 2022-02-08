@@ -133,7 +133,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h2>Ship Details</h2>
+      <h2 align="center">Ship Details</h2>
       <form onSubmit={handleEditFormSubmit}>
         <table>
           <thead>
@@ -192,7 +192,7 @@ function App() {
         </table>
         {isValidated === false ? <span small="true" style={{ color: "red" }}>The Ship Code is invalid. Please enter in format XXXX-0000-X0. </span> : null}
         <br />
-        <button type="submit">Add</button>
+        <button className="add" type="submit">Add</button>
       </form>
     </div>
   );

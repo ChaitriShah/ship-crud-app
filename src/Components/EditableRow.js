@@ -1,4 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
+import SaveIcon from "@material-ui/icons/Save";
+import CancelIcon from '@material-ui/icons/Cancel';
 
 const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick, handleEditFormSubmit }) => {
 
@@ -45,8 +47,8 @@ const EditableRow = ({ editFormData, handleEditFormChange, handleCancelClick, ha
                 {isEditCodeValidated === false ? <span small="true" style={{ color: "red" }}>Enter Ship code in  XXXX-0000-X0 format. </span> : null}
             </td>
             <td>
-                {isEditCodeValidated ? <button onClick={handleEditFormSubmit}>Save</button> : <button type="button">Save</button>}
-                <button type="button" onClick={handleCancelClick}>Cancel</button>
+                {isEditCodeValidated ? <button onClick={handleEditFormSubmit}><SaveIcon color="primary" /></button> : <button type="button"><SaveIcon color="primary" /></button>} &nbsp;
+                <button type="button" onClick={handleCancelClick}><CancelIcon color="primary" /></button>
             </td>
         </tr>
     )

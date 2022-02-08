@@ -5,6 +5,10 @@
   padding: 1rem;
 }
 
+h2 {
+  color: rgb(22, 0, 129);
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
@@ -15,7 +19,7 @@ td {
   border: 1px solid #ffffff;
   text-align: left;
   padding: 8px;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 th {
@@ -38,6 +42,10 @@ form * {
   width: 255px;
 } 
 
-.codeError {
-  border-color: red 2px solid;
+.add {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 80px;
+  background-color: rgb(205, 235, 253);
 }
