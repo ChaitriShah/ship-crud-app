@@ -1,9 +1,10 @@
-import './App.css';
-import data from './mock-data.json';
 import { useState, useEffect, useRef, Fragment } from 'react';
+
 import { nanoid } from 'nanoid';
 import ReadOnlyRow from './Components/ReadOnlyRow';
 import EditableRow from './Components/EditableRow';
+import './App.css';
+import data from './mock-data.json';
 
 function App() {
   const [details, setDetails] = useState(data);
@@ -63,7 +64,7 @@ function App() {
   }
 
 
-  const handleFormSubmit = async (event) => {
+  const handleAddFormSubmit = async (event) => {
     event.preventDefault();
     if (isValidated) {
       const newDetail = {
@@ -163,7 +164,7 @@ function App() {
       </form>
 
       <h2>Add a new Ship</h2>
-      <form className="add-form" onSubmit={handleFormSubmit}>
+      <form className="add-form" onSubmit={handleAddFormSubmit}>
         <table>
           <thead>
             <tr>

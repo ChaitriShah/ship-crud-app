@@ -1,6 +1,7 @@
 import React from "react";
+
 import EditIcon from "@material-ui/icons/Edit";
-import DeleteIcon from "@material-ui/icons/Delete"
+import DeleteIcon from "@material-ui/icons/Delete";
 
 const ReadOnlyRow = ({ detail, handleEditClick, handleDeleteClick }) => {
     return (
